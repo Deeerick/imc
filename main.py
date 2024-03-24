@@ -21,13 +21,17 @@ imc = calcular_imc(peso, altura_cm)
 
 print("\033[91m > Seu IMC é de {:.1f} \033[0m".format(imc))
 
-if imc < 18.5:
+if imc < 18:
     print("\033[91m > Classificação = ABAIXO DO PESO \033[0m")
-elif 18.5 <= imc < 24.9:
+elif 18 <= imc < 25:
     print("\033[91m > Classificação = PESO IDEAL \033[0m")
-elif 25.0 <= imc < 29.9:
+elif 25 <= imc < 30:
     print("\033[91m > Classificação = SOBREPESO \033[0m")
-elif 30.0 <= imc < 39.9:
-    print("\033[91m > Classificação = OBESIDADE \033[0m")
+elif 30.0 <= imc < 35:
+    print("\033[91m > Classificação = OBESIDADE I \033[0m")
+elif 35 <= imc < 40:
+    print("\033[91m > Classificação = OBESIDADE II \033[0m")
+elif imc > 40:
+    print("\033[91m > Classificação = OBESIDADE III \033[0m")
 else:
-    print("\033[91m > Classificação = OBESIDADE GRAVE \033[0m")
+    print("\033[91m > Por favor, tente novamente! \033[0m")
